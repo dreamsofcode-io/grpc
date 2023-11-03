@@ -1,0 +1,61 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
+
+package pokemon;
+
+option go_package = "./pb";
+
+service Pokedex {
+  rpc Create(PokemonRequest) returns (Pokemon);
+  rpc Read(PokemonFilter) returns (PokemonListResponse);
+  rpc ReadOne(PokemonID) returns (Pokemon);
+  rpc Update(PokemonUpdateRequest) returns (Pokemon);
+  rpc Delete(PokemonID) returns (google.protobuf.Empty);
+}
+
+enum Type {
+  UNKNOWN = 0;
+  NORMAL = 1;
+  FIRE = 2;
+  WATER = 3;
+  GRASS = 4;
+  ELECTRIC = 5;
+  ICE = 6;
+  FIGHTING = 7;
+  POISON = 8;
+  GROUND = 9;
+  FLYING = 10;
+  PSYCHIC = 11;
+  BUG = 12;
+  ROCK = 13;
+  GHOST = 14;
+  DRAGON = 15;
+}
+
+message PokemonRequest {
+  int32 id = 1;
+  string name = 2;
+  repeated Type type = 3;
+}
+
+message Pokemon {
+  int32 id = 1;
+  string name = 2;
+  repeated Type type = 3;
+  google.protobuf.Timestamp created_at = 4;
+  google.protobuf.Timestamp updated_at = 5;
+}
+
+message PokemonListResponse { repeated Pokemon pokemon = 1; }
+
+message PokemonFilter {};
+
+message PokemonID { int32 id = 1; }
+
+message PokemonUpdateRequest {
+  int32 id = 1;
+  string name = 2;
+  repeated Type type = 3;
+}

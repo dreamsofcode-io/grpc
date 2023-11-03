@@ -1,0 +1,8 @@
+containers: {
+  pokedex: {
+    build: ".",
+    ports: {
+      publish: "8080/tcp",
+    }
+  }
+}

@@ -5,7 +5,7 @@ in the [Dreams of Code youtube video](https://youtube.com/@dreamsofcode)
 
 You can deploy this code on acorn.io, for free, by clicking the button below
 
-[![Run in Acorn](https://acorn.io/v1-ui/run/badge?image=docker.io+dreamsofcode+pokemon-api:acorn&ref=dreamsofcode&count=false&style=for-the-badge&color=yellowgreen)](https://acorn.io/run/docker.io/dreamsofcode/pokemon-api:acorn?ref=dreamsofcode)
+[![Run in Acorn](https://acorn.io/v1-ui/run/badge?image=docker.io+dreamsofcode+pokemon-api:acorn&ref=dreamsofcode&count=false&style=for-the-badge)](https://acorn.io/run/docker.io/dreamsofcode/pokemon-api:acorn?ref=dreamsofcode)
 
 ## Requirements
 

@@ -1,7 +1,7 @@
 # Pokemon API gRPC
 
 This repo contains the source code for the pokemon API gRPC server, found
-in the [dreams of code youtube video](https://youtube.com/@dreamsofcode)
+in the [Dreams of Code youtube video](https://youtube.com/@dreamsofcode)
 
 You can deploy this code on acorn.io, for free, by clicking the button below
 

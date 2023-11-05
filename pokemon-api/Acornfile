@@ -2,7 +2,7 @@ containers: {
   pokedex: {
     build: ".",
     ports: {
-      publish: "8080/tcp",
+      publish: "8080/http2",
     }
   }
 }

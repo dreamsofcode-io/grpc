@@ -1,8 +1,21 @@
 containers: {
   pokedex: {
     build: ".",
+    env: {
+      "DATABASE_URL": "postgresql://postgres:supersecure123@db:5432/pokedex?sslmode=disable"
+    },
     ports: {
       publish: "8080/http2",
     }
+  },
+  db: {
+    image: "postgres:15",
+    env: {
+      "POSTGRES_PASSWORD": "supersecure123",
+      "POSTGRES_DB": "pokedex"
+    }
+    ports: [
+      "5432/tcp"
+    ]
   }
 }

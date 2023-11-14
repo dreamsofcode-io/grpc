@@ -28,6 +28,17 @@ func (s *Server) Create(
 	ctx context.Context,
 	req *pb.PokemonRequest,
 ) (*pb.Pokemon, error) {
+	if req.Id == 0 {
+		return nil, status.Errorf(codes.InvalidArgument, "id cannot be 0")
+	}
+
+	if req.Name == "" {
+		return nil, status.Errorf(codes.InvalidArgument, "name cannot be empty")
+	}
+
+	if len(req.Type) == 0 {
+		return nil, status.Errorf(codes.InvalidArgument, "type cannot be empty")
+	}
 
 	types := make([]string, len(req.Type))
 	for i, t := range req.Type {

@@ -1,6 +1,6 @@
 # Dreams of Code gRPC
 
-This project provides the source code for the gRPC video by [Dreams of Code](https://youtube.com/@dreamsofcode).
+This project provides the source code for the [gRPC video](https://youtu.be/_4TPM6clQjM) by [Dreams of Code](https://youtube.com/@dreamsofcode).
 
 ## Video instructions
 
@@ -40,6 +40,10 @@ Using golang
 $ go install google.golang.org/grpc/cmd/protoc-gen-go@v1.1
 $ go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.1
 ```
+
+## GRPC Clients
+
+In this video, I use [grpcui](https://github.com/fullstorydev/grpcui) and [grpcurl](https://github.com/fullstorydev/grpcurl)
 
 ## Calculator
 

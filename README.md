@@ -60,3 +60,13 @@ The Pokedex API can be found in the [./pokemon-api](./pokemon-api) directory.
 You can also deploy an instance of it yourself on acorn by clicking the following button:
 
 [![Run in Acorn](https://acorn.io/v1-ui/run/badge?image=docker.io+dreamsofcode+pokemon-api:acorn&ref=dreamsofcode&count=false&style=for-the-badge)](https://acorn.io/run/docker.io/dreamsofcode/pokemon-api:acorn?ref=dreamsofcode)
+
+## Disabling TLS
+
+When writing gRPC code, you can disable tls by using the following lines
+
+```go
+opts := []grpc.DialOption{
+    grpc.WithTransportCredentials(insecure.NewCredentials())
+}
+```

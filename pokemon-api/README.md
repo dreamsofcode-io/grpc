@@ -24,6 +24,13 @@ as well.
 $ brew install protobuf protoc-gen-go protoc-gen-go-grpc
 ```
 
+alternatively you can install the protoc plugins using golang
+
+```
+$ go install google.golang.org/grpc/cmd/protoc-gen-go@v1.1
+$ go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.1
+```
+
 ## Building
 
 To build this code, run `go build .` or `make build`.

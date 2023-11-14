@@ -70,3 +70,6 @@ opts := []grpc.DialOption{
     grpc.WithTransportCredentials(insecure.NewCredentials())
 }
 ```
+
+If you're wanting to connect locally, you'll need to use the `-plaintext`
+flag with both grpcui and grpcurl

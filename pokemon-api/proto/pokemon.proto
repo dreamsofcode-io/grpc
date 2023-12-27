@@ -32,6 +32,9 @@ enum Type {
   ROCK = 13;
   GHOST = 14;
   DRAGON = 15;
+  STEEL = 16;
+  DARK = 17;
+  FAIRY = 18;
 }
 
 message PokemonRequest {

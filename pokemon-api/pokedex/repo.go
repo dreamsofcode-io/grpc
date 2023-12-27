@@ -112,3 +112,17 @@ func (p *Repository) Update(ctx context.Context, pokemon Pokemon) error {
 
 	return nil
 }
+
+func (p *Repository) DeleteByID(ctx context.Context, id int32) error {
+	res, err := p.db.Exec(ctx, "DELETE FROM pokemon WHERE id = $1", id)
+
+	if err != nil {
+		return fmt.Errorf("failed to delete pokemon : %w. And why would you even try to delete a pokemon ? You heartless monster.", err)
+	}
+
+	if res.RowsAffected() == 0 {
+		return ErrNotFound
+	}
+
+	return nil
+}

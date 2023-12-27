@@ -133,5 +133,13 @@ func (s *Server) Delete(
 	ctx context.Context,
 	req *pb.PokemonID,
 ) (*emptypb.Empty, error) {
-	return nil, nil
+	err := s.repository.DeleteByID(ctx, req.Id)
+
+	if errors.Is(err, ErrNotFound) {
+		return nil, status.Errorf(codes.NotFound, "failed to delete pokemon")
+	} else if err != nil {
+		return nil, status.Errorf(codes.Internal, "failed to delete pokemon")
+	}
+
+	return &emptypb.Empty{}, nil
 }

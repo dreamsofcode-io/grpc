@@ -16,7 +16,7 @@ $ brew install protobuf protoc-gen-go protoc-gen-go-grpc
 alternatively you can install the protoc plugins using golang
 
 ```
-$ go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.26
+$ go install google.golang.org/grpc/cmd/protoc-gen-go@v1.1
 $ go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.1
 ```
 
@@ -37,7 +37,7 @@ $ yay -S protoc-gen-go protoc-gen-go-grpc
 Using golang
 
 ```
-$ go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.26
+$ go install google.golang.org/grpc/cmd/protoc-gen-go@v1.1
 $ go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.1
 ```
 
